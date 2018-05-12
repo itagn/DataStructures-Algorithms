@@ -4,19 +4,33 @@
  *  desc: 快速排序
  */
 
-function quickSort(arr){
-	if(arr.length>0){ 
-		const centerNum = arr.splice((arr.length/2 | 0), 1)
+
+ //  “阮一峰”版
+function quickSort (arr) {
+	if (arr.length > 1) { 
+		const centerNum = arr.splice((arr.length / 2 | 0), 1)
 		let left = [], right = []
-		for(let i=0;i<arr.length;i++){
-			if(arr[i]<centerNum){
-				left.push(arr[i])
-			}else{
-				right.push(arr[i])
-			}
+		for(let i = 0; i < arr.length; i++){
+			if(arr[i] < centerNum) left.push(arr[i])
+			else right.push(arr[i])
 		}
-		return arguments.callee(left).concat(centerNum, arguments.callee(right))
-	}else{
-		return []
+		return quickSort(left).concat(centerNum, quickSort(right))
+	} else {
+		return arr
+	}
+}
+
+// 《数据机构预算法JavaScript描述》版
+function quickSort (arr) {
+	if (arr.length > 1) {
+		let first = arr[0]
+		let prev = [], next = []
+		for (let i = 1; i < arr.length; i++) {
+			if (arr[i] < first) prev.push(arr[i])
+			else next.push(arr[i])
+		}
+		return quickSort(prev).concat(first, quickSort(next))
+	} else {
+		return arr
 	}
 }
