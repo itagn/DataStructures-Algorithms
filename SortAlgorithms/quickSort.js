@@ -36,7 +36,7 @@ function quickSort (arr) {
 }
 
 // 一行代码版
-let quickSort = arr => arr.length < 1 ? arr : [
+const quickSort = (arr = []) => arr.length < 1 ? arr : [
     ...quickSort(arr.filter((val, i) => i !== 0 && val <= arr[0])),
     arr[0],
     ...quickSort(arr.filter(val => val > arr[0])),

@@ -28,7 +28,8 @@
 - [X]  [selectSort.js: 选择排序][203]
 - [X]  [shellSort.js: 希尔排序（直接插入排序升级版）][204]
 - [X]  [quickSort.js: 快速排序][205]
-- [ ]  mergeSort.js: 归并排序（待完成）
+- [x]  [mergeSort.js: 归并排序][206]
+- [x]  [heapSort.js: 堆排序][207]
 
 作者：微博 [@itagn][1] - Github [@itagn][2] 
 
@@ -52,3 +53,5 @@
 [203]: https://github.com/itagn/DataStructures-Algorithms/blob/master/SortAlgorithms/selectSort.js
 [204]: https://github.com/itagn/DataStructures-Algorithms/blob/master/SortAlgorithms/shellSort.js
 [205]: https://github.com/itagn/DataStructures-Algorithms/blob/master/SortAlgorithms/quickSort.js
+[206]: https://github.com/itagn/DataStructures-Algorithms/blob/master/SortAlgorithms/mergeSort.js
+[207]: https://github.com/itagn/DataStructures-Algorithms/blob/master/SortAlgorithms/heapSort.js
